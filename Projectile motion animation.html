@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile motion animation</title>
+    <link rel="shortcut icon" href="download-removebg-preview.png" type="image/x-icon">
+    <style>
+        .container{
+            height:90vh;
+            width:90vw;
+            background-color: yellow;
+            background-image: url("download-removebg-preview.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            border:2px solid black;
+            position:relative;
+            margin:40px auto;
+        }
+        .ball{
+            height:100px;
+            width:100px;
+            border:2px solid black;
+            background-color: red;
+            border-radius: 50%;
+            position:absolute;
+            left:0;
+            bottom:0;
+            animation: inX 4s linear infinite, inY 2s ease-out infinite alternate;
+        }
+        @keyframes inX {
+            from{
+                left:0;
+            }to{
+                left:90%;
+            }
+        }
+        @keyframes inY {
+            from{
+                bottom:0;
+            }to{
+                bottom:90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
